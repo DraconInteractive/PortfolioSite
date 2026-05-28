@@ -3,6 +3,7 @@ export type Project = {
   title: string;
   company: string;
   period: string;
+  type: "professional" | "personal";
   description: string;
   overview: string[];
   highlights: string[];
@@ -22,11 +23,13 @@ export type Experience = {
 };
 
 export const projects: Project[] = [
+  // — Professional —
   {
     id: "ubf-studio",
     title: "UBF Studio",
     company: "Futureverse Inc",
     period: "2023 – 2025",
+    type: "professional",
     description:
       "Cross-platform desktop application for authoring and rendering 3D assets from procedural node graphs. Built the React/Electron editor, Rust runtime library, and Unity/Unreal engine integration layers.",
     overview: [
@@ -50,6 +53,7 @@ export const projects: Project[] = [
     title: "Heavy Equipment Simulation",
     company: "BetterThanReality",
     period: "2025 – 2026",
+    type: "professional",
     description:
       "Industrial training simulation modelling a Komatsu haul truck's electrical isolation, hydraulics, and mechanical subsystems in Unreal C++. Paired with a WPF desktop launcher communicating with a Go/PostgreSQL backend via REST.",
     overview: [
@@ -71,6 +75,7 @@ export const projects: Project[] = [
     title: "ML-Driven Agent Runtime",
     company: "Altered State Machine",
     period: "2023",
+    type: "professional",
     description:
       "Mobile game runtime integrating TensorFlow models for on-device AI decision-making, developed in collaboration with FIFA. Achieved 16 model inferences per second across 8 agents at ~75 FPS on older Android devices.",
     overview: [
@@ -92,6 +97,7 @@ export const projects: Project[] = [
     title: "CPR Training Platform",
     company: "St John WA",
     period: "2018 – 2021",
+    type: "professional",
     description:
       "Cross-platform first aid training application across PC VR, iOS, Android, and WebGL featuring a custom ESP32 CPR peripheral for real-time compression analysis. GitHub Actions CI/CD and LMS integration for certification tracking.",
     overview: [
@@ -107,6 +113,72 @@ export const projects: Project[] = [
       "LMS integration for authentication, course progress tracking, and certification management",
     ],
     tags: ["Unity", "C#", "ESP32", "C++", "GitHub Actions", "WebGL", "iOS", "Android"],
+  },
+
+  // — Personal —
+  {
+    id: "wizards-codex",
+    title: "Wizard's Codex",
+    company: "Personal Project",
+    period: "In Development",
+    type: "personal",
+    description:
+      "A fantasy game built around in-game TypeScript programming. Players write real code — spells, rituals, automations — within a narrative-driven world where the language of magic is the language of software.",
+    overview: [
+      "Wizard's Codex is a personal game project exploring what happens when programming is the core mechanic rather than a meta-layer. Players interact with the world by writing TypeScript — casting spells, binding rituals, and building automations — within a fantasy narrative that frames the act of coding as wielding magic.",
+      "The project is built in Unity with a custom in-game code editor and TypeScript runtime. Player-authored scripts are evaluated at runtime, with results feeding back into the game world — a spell that doesn't compile simply fails to fire. The design challenge is making real programming feel native to a fantasy context, rather than educational or gamified in a surface-level way.",
+    ],
+    highlights: [
+      "In-game TypeScript editor and runtime evaluating player-authored code at play time",
+      "Fantasy narrative framing where programming mechanics and game world are fully integrated",
+      "Spell and ritual systems driven entirely by code the player writes",
+      "Custom feedback systems translating compiler errors into in-world narrative responses",
+    ],
+    tags: ["Unity", "C#", "TypeScript", "Game Design", "Narrative Systems"],
+  },
+  {
+    id: "bertie",
+    title: "Bertie",
+    company: "Personal Project",
+    period: "2024",
+    type: "personal",
+    description:
+      "A desktop companion robot with a two-axis servo head, e-ink display eyes, and voice input. A button press streams microphone audio to a server for transcription, which drives motor animations and expressive eye states.",
+    overview: [
+      "Bertie is a small desktop robot built around the idea of a physically expressive voice interface. The hardware consists of a two-axis servo mechanism for head movement, an e-ink display rendering expressive eye states, and a microphone with a hardware button for input triggering.",
+      "Pressing the button streams microphone audio to a server-side transcription pipeline. The transcription output is parsed to drive two outputs simultaneously: servo animations that give Bertie physical reactions to what was said, and e-ink display updates that change the eye expression to match the response state. The result is a companion device that reacts to voice with both movement and expression rather than just audio feedback.",
+    ],
+    highlights: [
+      "Two-axis servo head with motor animations driven by transcription output",
+      "E-ink display rendering expressive eye states mapped to response context",
+      "Hardware button triggers audio capture and streams to server-side transcription pipeline",
+      "Coordinated physical and visual response system running from a single transcription result",
+    ],
+    tags: ["Python", "Hardware", "Servo Motors", "E-ink", "Speech Recognition", "Embedded"],
+  },
+  {
+    id: "livegraph-studio",
+    title: "LiveGraph Studio",
+    company: "Personal Project",
+    period: "2025",
+    type: "personal",
+    description:
+      "A browser-based node graph editor that serialises DAGs to JSON for runtime consumption in Unity. Designed to drive behaviour tree AI, narrative systems, and other graph-structured game logic without recompiling.",
+    overview: [
+      "LiveGraph Studio is a personal project exploring visual programming tooling for game systems. Built with Vue.js and vue-flow, it provides a drag-and-drop node graph editor where developers can author DAG-based logic graphs, connect typed pins between nodes, and serialise the result to JSON.",
+      "The JSON output is designed for runtime consumption by a Unity integration layer — graphs can define behaviour tree AI, narrative branching, event sequences, or any system that maps naturally to a directed acyclic graph. The editor includes undo/redo with viewport state preservation, save/load via localStorage, and a categorised node menu for building custom node libraries. The project grew directly out of the graph-based work at Futureverse, applied to a personal tooling context.",
+    ],
+    highlights: [
+      "Visual node graph editor with drag-and-drop pin connections and typed node system",
+      "Graph serialisation to JSON for runtime consumption by external systems",
+      "Unity integration layer interpreting serialised graphs to drive in-engine behaviour",
+      "Designed for behaviour tree AI, narrative systems, and DAG-driven game logic",
+      "Undo/redo history with viewport state preservation and localStorage persistence",
+      "Extensible BaseNode architecture for building custom node type libraries",
+    ],
+    tags: ["Vue.js", "TypeScript", "Vite", "Unity", "JSON", "DAG", "Node.js"],
+    repo: "https://github.com/DraconInteractive/Dracon.Frontend.Studio",
+    link: "https://pcarey.dev/2025/10/07/livegraph-studio/",
   },
 ];
 
