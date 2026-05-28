@@ -2,7 +2,40 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import type { Project } from "@/lib/data";
+import type { Project, ProjectMedia } from "@/lib/data";
+
+function MediaItem({ item }: { item: ProjectMedia }) {
+  if (item.type === "video") {
+    return (
+      <figure className="w-full">
+        <video
+          src={item.src}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full rounded-sm bg-[#111110]"
+        />
+        {item.caption && (
+          <figcaption className="text-xs text-[#7a7872] font-mono mt-2">
+            {item.caption}
+          </figcaption>
+        )}
+      </figure>
+    );
+  }
+  return (
+    <figure className="w-full">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={item.src} alt={item.caption ?? ""} className="w-full rounded-sm" />
+      {item.caption && (
+        <figcaption className="text-xs text-[#7a7872] font-mono mt-2">
+          {item.caption}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
 
 type Props = {
   project: Project;
@@ -57,6 +90,45 @@ export default function ProjectContent({ project, prev, next }: Props) {
           </motion.div>
         </div>
       </section>
+
+      {/* Media */}
+      {project.media && project.media.length > 0 && (
+        <section className="py-20 border-t border-[#e0dcd4]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-[#ff5c00] text-xs font-mono tracking-widest uppercase mb-10">
+              Media
+            </p>
+            <div className="space-y-4">
+              {/* Primary — first item full width */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <MediaItem item={project.media[0]} />
+              </motion.div>
+
+              {/* Secondary — remaining items in a row */}
+              {project.media.length > 1 && (
+                <div className={`grid gap-4 ${project.media.length === 2 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"}`}>
+                  {project.media.slice(1).map((item, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 16 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: i * 0.1 }}
+                    >
+                      <MediaItem item={item} />
+                    </motion.div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Highlights */}
       <section className="py-20 border-t border-[#e0dcd4]">

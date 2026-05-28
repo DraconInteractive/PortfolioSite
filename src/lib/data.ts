@@ -1,3 +1,9 @@
+export type ProjectMedia = {
+  src: string;
+  type: "video" | "image";
+  caption?: string;
+};
+
 export type Project = {
   id: string;
   title: string;
@@ -8,6 +14,7 @@ export type Project = {
   overview: string[];
   highlights: string[];
   tags: string[];
+  media?: ProjectMedia[];
   link?: string;
   repo?: string;
   featured?: boolean;
@@ -46,6 +53,23 @@ export const projects: Project[] = [
       "CI/CD pipelines for library builds, artifact validation, and multi-platform distribution via AWS",
     ],
     tags: ["Rust", "React", "Electron", "C#", "C++", "GraphQL", "AWS", "Node.js"],
+    media: [
+      {
+        src: "/assets/ubf/studio_example.mp4",
+        type: "video",
+        caption: "Node graph authoring in the UBF Studio editor",
+      },
+      {
+        src: "/assets/ubf/JSID_Test01.mp4",
+        type: "video",
+        caption: "Rendered shiba inu — runtime asset output",
+      },
+      {
+        src: "/assets/ubf/Raicers_Build_Test01.mp4",
+        type: "video",
+        caption: "Dynamic part-switching on a vehicle asset",
+      },
+    ],
     featured: true,
   },
   {
