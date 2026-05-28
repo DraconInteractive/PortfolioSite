@@ -16,10 +16,34 @@ export default function ProjectContent({ project, prev, next }: Props) {
       {/* Overview */}
       <section className="py-20 border-t border-[#e0dcd4]">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16">
-          <div>
-            <p className="text-[#ff5c00] text-xs font-mono tracking-widest uppercase mb-2">
+          <div className="flex flex-col gap-6">
+            <p className="text-[#ff5c00] text-xs font-mono tracking-widest uppercase">
               Overview
             </p>
+            {(project.repo || project.link) && (
+              <div className="flex flex-col gap-2">
+                {project.repo && (
+                  <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm px-4 py-2 bg-[#ff5c00] text-white font-semibold rounded hover:bg-[#e05200] transition-colors text-center"
+                  >
+                    View Repo ↗
+                  </a>
+                )}
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm px-4 py-2 border border-[#e0dcd4] text-[#111110] rounded hover:border-[#ff5c00] hover:text-[#ff5c00] transition-all text-center"
+                  >
+                    Visit Site ↗
+                  </a>
+                )}
+              </div>
+            )}
           </div>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
