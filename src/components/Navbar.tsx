@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
@@ -12,8 +13,12 @@ const links = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const navHref = (hash: string) =>
+    pathname === "/" ? hash : `/${hash}`;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -52,7 +57,7 @@ export default function Navbar() {
             {links.map((link) => (
               <li key={link.href}>
                 <a
-                  href={link.href}
+                  href={navHref(link.href)}
                   className="text-sm text-[#7a7872] hover:text-[#111110] transition-colors"
                 >
                   {link.label}
@@ -110,7 +115,7 @@ export default function Navbar() {
               {links.map((link, i) => (
                 <motion.a
                   key={link.href}
-                  href={link.href}
+                  href={navHref(link.href)}
                   onClick={close}
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
