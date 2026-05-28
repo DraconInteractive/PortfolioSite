@@ -96,15 +96,15 @@ export const projects: Project[] = [
   },
   {
     id: "ml-agent-system",
-    title: "ML-Driven Agent Runtime",
-    company: "Altered State Machine",
+    title: "FIFA: AI League",
+    company: "Altered State Machine × FIFA",
     period: "2023",
     type: "professional",
     description:
-      "Mobile game runtime integrating TensorFlow models for on-device AI decision-making, developed in collaboration with FIFA. Achieved 16 model inferences per second across 8 agents at ~75 FPS on older Android devices.",
+      "Mobile football game developed in collaboration with FIFA, built around ML-driven agent decision-making. Achieved 16 TensorFlow model inferences per second across 8 simultaneous agents at ~75 FPS on older Android devices — all running on-device.",
     overview: [
-      "Developed mobile applications for iOS and Android integrating machine learning–driven decision systems into a real-time Unity runtime, developed in collaboration with FIFA. The core challenge was enabling on-device inference across multiple simultaneous agents without degrading frame rate on low-end hardware.",
-      "I integrated TensorFlow-built models into the Unity runtime, enabling 16 model inferences per second across eight agents while maintaining ~75 FPS on older Android devices — all decision logic running locally with no server-side processing. Model outputs were evaluated by a rule-based decision layer that selected actions based on current application state. I also built training data pipelines using Unity ML-Agents and CI/CD infrastructure on containerised EC2 instances to automate training runs, generate model variants en masse, and use analytics to automate model selection.",
+      "FIFA: AI League is a mobile football game developed in collaboration with FIFA, built around a machine learning–driven agent system running entirely on-device. The core technical challenge was enabling real-time inference across multiple simultaneous agents on low-end Android hardware without server-side processing.",
+      "I integrated TensorFlow-built models into the Unity runtime, achieving 16 model inferences per second across eight agents while maintaining ~75 FPS on older Android devices. Model outputs fed into a rule-based decision layer that selected actions based on current game state, combining the predictive power of ML with the reliability of explicit logic. I also designed and built the training infrastructure — Unity ML-Agents extensions for custom agent configurations, containerised EC2 training sessions running parameterised runs to generate model variants at scale, and analytics pipelines to automate model evaluation and selection for integration into mobile builds.",
     ],
     highlights: [
       "TensorFlow model integration into Unity runtime for on-device multi-agent inference",
@@ -115,6 +115,33 @@ export const projects: Project[] = [
       "Analytics-driven automated model selection integrated into the CI/CD process",
     ],
     tags: ["Unity", "C#", "TensorFlow", "Python", "AWS EC2", "CI/CD", "ML-Agents"],
+    media: [
+      {
+        src: "/assets/fifa/game-trailer-nogameplay.mp4",
+        type: "video",
+        caption: "FIFA: AI League — official game trailer",
+      },
+      {
+        src: "/assets/fifa/banner.png",
+        type: "image",
+        caption: "Game loading screen",
+      },
+      {
+        src: "/assets/fifa/arena_page.png",
+        type: "image",
+        caption: "In-game arena selection screen",
+      },
+      {
+        src: "/assets/fifa/training_01.mp4",
+        type: "video",
+        caption: "ML agent training in progress — agents playing at accelerated speed during automated training runs",
+      },
+      {
+        src: "/assets/fifa/ui_graph.png",
+        type: "image",
+        caption: "Game loop and UI flow planning diagram",
+      },
+    ],
   },
   {
     id: "cpr-training-platform",
