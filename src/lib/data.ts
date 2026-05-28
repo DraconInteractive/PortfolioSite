@@ -117,11 +117,6 @@ export const projects: Project[] = [
     tags: ["Unity", "C#", "TensorFlow", "Python", "AWS EC2", "CI/CD", "ML-Agents"],
     media: [
       {
-        src: "/assets/fifa/game-trailer-nogameplay.mp4",
-        type: "video",
-        caption: "FIFA: AI League — official game trailer",
-      },
-      {
         src: "/assets/fifa/banner.png",
         type: "image",
         caption: "Game loading screen",
