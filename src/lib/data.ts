@@ -123,18 +123,20 @@ export const projects: Project[] = [
     period: "In Development",
     type: "personal",
     description:
-      "A fantasy game built around in-game TypeScript programming. Players write real code — spells, rituals, automations — within a narrative-driven world where the language of magic is the language of software.",
+      "An Electron desktop game where TypeScript is the magic system. Players write real scripts in a sandboxed runtime to command spirits, run rituals, and automate a growing magical domain — inspired by Bitburner's write-code-to-play loop.",
     overview: [
-      "Wizard's Codex is a personal game project exploring what happens when programming is the core mechanic rather than a meta-layer. Players interact with the world by writing TypeScript — casting spells, binding rituals, and building automations — within a fantasy narrative that frames the act of coding as wielding magic.",
-      "The project is built in Unity with a custom in-game code editor and TypeScript runtime. Player-authored scripts are evaluated at runtime, with results feeding back into the game world — a spell that doesn't compile simply fails to fire. The design challenge is making real programming feel native to a fantasy context, rather than educational or gamified in a surface-level way.",
+      "Wizard's Codex is an Electron desktop game built around a single design premise: compiled TypeScript is the magic system. Inspired by Bitburner, the game starts with manual console commands — summon a spirit, channel a resource — but as the player's domain grows, manual control becomes infeasible. Automation is the progression. Players move from typing individual commands to writing scripts that manage spirits, schedule rituals, react to world events, and govern dominions across a persistent fantasy world.",
+      "The interface is console-dominant — a 70/30 split between an xterm.js terminal and a read-only React status panel. Player scripts are authored in a Monaco editor overlay with full autocomplete via auto-generated TypeScript definitions, compiled in-process via ts.transpileModule, and executed in a worker_threads sandbox using SharedArrayBuffer and Atomics.wait for synchronous NS API calls back to the main process. The runtime exposes a fantasy-flavoured API (ns.summon(), ns.spirits(), ns.explore(), ns.dominion()) that drives a set of interconnected game systems — reservoir management, spirit progression, POI exploration, study trees, missive quests, and a dominion governance layer.",
     ],
     highlights: [
-      "In-game TypeScript editor and runtime evaluating player-authored code at play time",
-      "Fantasy narrative framing where programming mechanics and game world are fully integrated",
-      "Spell and ritual systems driven entirely by code the player writes",
-      "Custom feedback systems translating compiler errors into in-world narrative responses",
+      "TypeScript sandbox via worker_threads + SharedArrayBuffer + Atomics.wait for synchronous NS calls",
+      "In-process ts.transpileModule compilation with Monaco editor and auto-generated .d.ts for full autocomplete",
+      "xterm.js console as primary interface — keyboard-first, all game state queryable via commands",
+      "Interconnected systems: reservoir, spirits, POIs, activities, study tree, dominions, missives",
+      "Diegetic design throughout — scripts are 'inscriptions', the editor is the 'Scriptorium', running scripts are 'weavings'",
+      "Inspired by Bitburner — automation is the progression loop, not an optional power-up",
     ],
-    tags: ["Unity", "C#", "TypeScript", "Game Design", "Narrative Systems"],
+    tags: ["Electron", "TypeScript", "React", "Node.js", "xterm.js", "Monaco Editor", "Vite"],
   },
   {
     id: "bertie",
