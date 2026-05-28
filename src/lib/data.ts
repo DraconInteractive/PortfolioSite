@@ -183,7 +183,6 @@ export const projects: Project[] = [
     ],
     tags: ["Vue.js", "TypeScript", "Vite", "Unity", "JSON", "DAG", "Node.js"],
     repo: "https://github.com/DraconInteractive/Dracon.Frontend.Studio",
-    link: "https://pcarey.dev/2025/10/07/livegraph-studio/",
   },
 ];
 
