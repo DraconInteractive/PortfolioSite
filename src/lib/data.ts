@@ -121,6 +121,7 @@ export const projects: Project[] = [
       "Containerised EC2 training pipelines with parameterised runs generating model variants at scale",
       "Analytics-driven automated model selection integrated into the CI/CD process",
     ],
+    logo: "/logos/alteredstatemachine.png",
     tags: ["Unity", "C#", "TensorFlow", "Python", "AWS EC2", "CI/CD", "ML-Agents"],
     media: [
       {
