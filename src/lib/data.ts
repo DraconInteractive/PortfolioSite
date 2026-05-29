@@ -97,7 +97,7 @@ export const projects: Project[] = [
       "C# WPF desktop launcher for scenario configuration and training session management",
       "REST API integration with a Go backend and PostgreSQL database for auth and training data",
     ],
-    logo: "/logos/betterthanreality.svg",
+    logo: "/logos/betterthanreality.png",
     tags: ["Unreal C++", "WPF", "C#", "REST", "PostgreSQL", "Go"],
     featured: true,
   },
