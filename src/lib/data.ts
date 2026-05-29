@@ -140,7 +140,7 @@ export const projects: Project[] = [
   },
   {
     id: "cpr-training-platform",
-    title: "CPR Training Platform",
+    title: "First Aid Skills VR",
     company: "St John WA",
     period: "2018 – 2021",
     type: "professional",
