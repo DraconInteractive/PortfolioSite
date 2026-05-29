@@ -159,6 +159,18 @@ export const projects: Project[] = [
       "LMS integration for authentication, course progress tracking, and certification management",
     ],
     tags: ["Unity", "C#", "ESP32", "C++", "GitHub Actions", "WebGL", "iOS", "Android"],
+    media: [
+      {
+        src: "/assets/first-aid/fa.png",
+        type: "image",
+        caption: "First Aid Skills VR — in-engine screenshot",
+      },
+      {
+        src: "/assets/first-aid/inengine_demo02.mp4",
+        type: "video",
+        caption: "In-engine demonstration",
+      },
+    ],
   },
 
   // — Personal —

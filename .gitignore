@@ -42,3 +42,9 @@ next-env.d.ts
 
 # resume / personal documents
 *.pdf
+
+# large media files — serve locally or via external hosting
+*.mov
+public/assets/first-aid/inengine_demo.mp4
+public/assets/first-aid/first_aid_skills_vr*
+public/assets/first-aid/Shelley*
