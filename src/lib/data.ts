@@ -2,7 +2,7 @@ export type ProjectMedia = {
   src: string;
   type: "video" | "image";
   caption?: string;
-  cols?: 4 | 6 | 8 | 12; // grid column span out of 12, defaults to 12
+  cols?: 3 | 4 | 6 | 8 | 9 | 12; // grid column span out of 12, defaults to 12
 };
 
 export type Project = {
@@ -172,13 +172,13 @@ export const projects: Project[] = [
         src: "/assets/first-aid/vr-st-john.webp",
         type: "image",
         caption: "First Aid Skills VR — St John WA",
-        cols: 8,
+        cols: 9,
       },
       {
         src: "/assets/first-aid/fa_promo.mp4",
         type: "video",
         caption: "Promotional video",
-        cols: 4,
+        cols: 3,
       },
       {
         src: "/assets/first-aid/inengine_demo02.mp4",

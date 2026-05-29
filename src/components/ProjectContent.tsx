@@ -5,9 +5,11 @@ import Link from "next/link";
 import type { Project, ProjectMedia } from "@/lib/data";
 
 const colSpanMap: Record<number, string> = {
+  3:  "col-span-12 md:col-span-3",
   4:  "col-span-12 md:col-span-4",
   6:  "col-span-12 md:col-span-6",
   8:  "col-span-12 md:col-span-8",
+  9:  "col-span-12 md:col-span-9",
   12: "col-span-12",
 };
 const colSpan = (cols?: number) => colSpanMap[cols ?? 12] ?? "col-span-12";
