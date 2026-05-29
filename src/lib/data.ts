@@ -2,6 +2,7 @@ export type ProjectMedia = {
   src: string;
   type: "video" | "image";
   caption?: string;
+  cols?: 4 | 6 | 8 | 12; // grid column span out of 12, defaults to 12
 };
 
 export type Project = {
@@ -58,16 +59,19 @@ export const projects: Project[] = [
         src: "/assets/ubf/studio_example.mp4",
         type: "video",
         caption: "Node graph authoring in the UBF Studio editor",
+        cols: 12,
       },
       {
         src: "/assets/ubf/JSID_Test01.mp4",
         type: "video",
         caption: "Rendered shiba inu — runtime asset output",
+        cols: 6,
       },
       {
         src: "/assets/ubf/Raicers_Build_Test01.mp4",
         type: "video",
         caption: "Dynamic part-switching on a vehicle asset",
+        cols: 6,
       },
     ],
     featured: true,
@@ -120,21 +124,25 @@ export const projects: Project[] = [
         src: "/assets/fifa/banner_hires.png",
         type: "image",
         caption: "Game loading screen",
+        cols: 12,
       },
       {
         src: "/assets/fifa/arena_page.png",
         type: "image",
         caption: "In-game arena selection screen",
+        cols: 6,
       },
       {
         src: "/assets/fifa/training_01.mp4",
         type: "video",
         caption: "ML agent training in progress — agents playing at accelerated speed during automated training runs",
+        cols: 6,
       },
       {
         src: "/assets/fifa/ui_graph.png",
         type: "image",
         caption: "Game loop and UI flow planning diagram",
+        cols: 12,
       },
     ],
   },
@@ -164,11 +172,19 @@ export const projects: Project[] = [
         src: "/assets/first-aid/vr-st-john.webp",
         type: "image",
         caption: "First Aid Skills VR — St John WA",
+        cols: 8,
+      },
+      {
+        src: "/assets/first-aid/fa_promo.mp4",
+        type: "video",
+        caption: "Promotional video",
+        cols: 4,
       },
       {
         src: "/assets/first-aid/inengine_demo02.mp4",
         type: "video",
         caption: "In-engine demonstration",
+        cols: 12,
       },
     ],
   },

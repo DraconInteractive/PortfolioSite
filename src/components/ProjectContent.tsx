@@ -4,6 +4,14 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import type { Project, ProjectMedia } from "@/lib/data";
 
+const colSpanMap: Record<number, string> = {
+  4:  "col-span-12 md:col-span-4",
+  6:  "col-span-12 md:col-span-6",
+  8:  "col-span-12 md:col-span-8",
+  12: "col-span-12",
+};
+const colSpan = (cols?: number) => colSpanMap[cols ?? 12] ?? "col-span-12";
+
 function MediaItem({ item }: { item: ProjectMedia }) {
   if (item.type === "video") {
     return (
@@ -98,33 +106,19 @@ export default function ProjectContent({ project, prev, next }: Props) {
             <p className="text-[#ff5c00] text-xs font-mono tracking-widest uppercase mb-10">
               Media
             </p>
-            <div className="space-y-4">
-              {/* Primary — first item full width */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <MediaItem item={project.media[0]} />
-              </motion.div>
-
-              {/* Secondary — remaining items in a row */}
-              {project.media.length > 1 && (
-                <div className={`grid gap-4 ${project.media.length === 2 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"}`}>
-                  {project.media.slice(1).map((item, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, y: 16 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: i * 0.1 }}
-                    >
-                      <MediaItem item={item} />
-                    </motion.div>
-                  ))}
-                </div>
-              )}
+            <div className="grid grid-cols-12 gap-4">
+              {project.media.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className={colSpan(item.cols)}
+                >
+                  <MediaItem item={item} />
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
