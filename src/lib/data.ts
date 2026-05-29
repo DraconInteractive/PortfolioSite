@@ -161,9 +161,9 @@ export const projects: Project[] = [
     tags: ["Unity", "C#", "ESP32", "C++", "GitHub Actions", "WebGL", "iOS", "Android"],
     media: [
       {
-        src: "/assets/first-aid/fa.png",
+        src: "/assets/first-aid/vr-st-john.webp",
         type: "image",
-        caption: "First Aid Skills VR — in-engine screenshot",
+        caption: "First Aid Skills VR — St John WA",
       },
       {
         src: "/assets/first-aid/inengine_demo02.mp4",
