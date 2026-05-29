@@ -15,6 +15,7 @@ export type Project = {
   overview: string[];
   highlights: string[];
   tags: string[];
+  logo?: string;
   media?: ProjectMedia[];
   link?: string;
   repo?: string;
@@ -53,6 +54,7 @@ export const projects: Project[] = [
       "Defined and maintained the cross-platform graph schema specification and versioning standards",
       "CI/CD pipelines for library builds, artifact validation, and multi-platform distribution via AWS",
     ],
+    logo: "/logos/futureverse.png",
     tags: ["Rust", "React", "Electron", "C#", "C++", "GraphQL", "AWS", "Node.js"],
     media: [
       {
@@ -166,6 +168,7 @@ export const projects: Project[] = [
       "GitHub Actions CI/CD for automated builds, addressable bundle generation, and environment deployment",
       "LMS integration for authentication, course progress tracking, and certification management",
     ],
+    logo: "/logos/stjohn-wa.svg",
     tags: ["Unity", "C#", "ESP32", "C++", "GitHub Actions", "WebGL", "iOS", "Android"],
     media: [
       {

@@ -30,9 +30,19 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           )}
         </div>
 
-        <h3 className="font-[family-name:var(--font-space-grotesk)] font-semibold text-xl text-[#111110] mb-1 group-hover:text-[#ff5c00] transition-colors">
-          {project.title}
-        </h3>
+        <div className="flex items-center gap-3 mb-1">
+          {project.logo && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={project.logo}
+              alt=""
+              className="h-5 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+            />
+          )}
+          <h3 className="font-[family-name:var(--font-space-grotesk)] font-semibold text-xl text-[#111110] group-hover:text-[#ff5c00] transition-colors">
+            {project.title}
+          </h3>
+        </div>
         <p className="text-[#ff5c00] text-xs font-mono mb-3">{project.company}</p>
         <p className="text-[#7a7872] text-sm leading-relaxed mb-6 flex-1">
           {project.description}
