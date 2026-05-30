@@ -238,6 +238,7 @@ export const projects: Project[] = [
       "2-DOF aluminium-framed head with dual power rails (servo + logic separated)",
       "IR positioning sensor with LED tracking capability",
     ],
+    logo: "/assets/bertie/bertie_logo.png",
     tags: ["C++", "C#", "Python", "ESP32", "Arduino", "PlatformIO", "TCP", "E-ink", "Speech-to-Text"],
     repo: "https://github.com/DraconInteractive/Dracon.Embedded.Bertie",
   },
