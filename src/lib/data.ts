@@ -215,6 +215,7 @@ export const projects: Project[] = [
       "Diegetic design throughout — scripts are 'inscriptions', the editor is the 'Scriptorium', running scripts are 'weavings'",
       "Inspired by Bitburner — automation is the progression loop, not an optional power-up",
     ],
+    logo: "/assets/wizards-codex/wc_logo.png",
     tags: ["Electron", "TypeScript", "React", "Node.js", "xterm.js", "Monaco Editor", "Vite"],
   },
   {
