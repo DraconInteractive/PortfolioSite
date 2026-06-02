@@ -55,7 +55,7 @@ export default function Hero() {
           I turn complex systems into production software — runtime platforms, simulation environments, ML integrations, and the infrastructure that holds them together.
         </motion.p>
 
-        <motion.div {...fadeUp(0.5)} className="flex items-center justify-center gap-4">
+        <motion.div {...fadeUp(0.5)} className="flex flex-wrap items-center justify-center gap-4">
           <a
             href="#projects"
             className="px-6 py-3 bg-[#ff5c00] text-white font-semibold text-sm rounded hover:bg-[#e05200] transition-colors"
@@ -67,6 +67,13 @@ export default function Hero() {
             className="px-6 py-3 border border-[#e0dcd4] text-[#111110] text-sm rounded hover:border-[#ff5c00] hover:text-[#ff5c00] transition-all"
           >
             Get In Touch
+          </a>
+          <a
+            href="/assets/PeterCarey_Resume_250526_lf3.pdf"
+            download
+            className="px-6 py-3 border border-[#e0dcd4] text-[#111110] text-sm rounded hover:border-[#ff5c00] hover:text-[#ff5c00] transition-all"
+          >
+            Resume ↓
           </a>
         </motion.div>
 

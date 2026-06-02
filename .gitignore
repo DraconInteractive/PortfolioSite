@@ -40,8 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# resume / personal documents
+# resume / personal documents (root-level only — allow PDFs in public/assets)
 *.pdf
+!public/assets/**/*.pdf
 
 # large media files — serve locally or via external hosting
 *.mov
