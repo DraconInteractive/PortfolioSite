@@ -73,7 +73,21 @@ export default function Hero() {
             download
             className="px-6 py-3 border border-[#e0dcd4] text-[#111110] text-sm rounded hover:border-[#ff5c00] hover:text-[#ff5c00] transition-all"
           >
-            Resume ↓
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="inline-block mr-1.5 -mt-0.5"
+            >
+              <path d="M7 1v7M4.5 5.5L7 8l2.5-2.5" />
+              <path d="M1 10v2.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V10" />
+            </svg>
+            Resume
           </a>
         </motion.div>
 
