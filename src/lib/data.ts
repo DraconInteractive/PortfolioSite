@@ -293,6 +293,14 @@ export const projects: Project[] = [
     ],
     tags: ["Python", "ESP32", "ESP-IDF", "C", "C++", "ElevenLabs", "HTTP", "Firmware", "Hardware"],
     repo: "https://github.com/DraconInteractive/ESP-Home-Server",
+    media: [
+      {
+        src: "/assets/esp home/sc_dashboard.png",
+        type: "image",
+        caption: "Browser dashboard — device state, recent commands, and proxied camera feeds",
+        cols: 12,
+      },
+    ],
   },
 ];
 
