@@ -216,6 +216,32 @@ export const projects: Project[] = [
       "Inspired by Bitburner — automation is the progression loop, not an optional power-up",
     ],
     logo: "/assets/wizards-codex/wc_logo.png",
+    media: [
+      {
+        src: "/assets/wizards-codex/honor_start_rec.mp4",
+        type: "video",
+        caption: "Game startup — the console interface and live state panel",
+        cols: 12,
+      },
+      {
+        src: "/assets/wizards-codex/sc_repscript.png",
+        type: "image",
+        caption: "The Scriptorium — Monaco editor with live-generated TypeScript API definitions",
+        cols: 12,
+      },
+      {
+        src: "/assets/wizards-codex/sc_studytree.png",
+        type: "image",
+        caption: "The Study Tree — upgrades and progression paths",
+        cols: 6,
+      },
+      {
+        src: "/assets/wizards-codex/sc_missives.png",
+        type: "image",
+        caption: "Missives — narrative quest log with active and completed objectives",
+        cols: 6,
+      },
+    ],
     tags: ["Electron", "TypeScript", "React", "Node.js", "xterm.js", "Monaco Editor", "Vite"],
   },
   {
