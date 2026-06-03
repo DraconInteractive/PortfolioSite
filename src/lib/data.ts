@@ -3,6 +3,7 @@ export type ProjectMedia = {
   type: "video" | "image";
   caption?: string;
   cols?: 3 | 4 | 6 | 8 | 9 | 12; // grid column span out of 12, defaults to 12
+  controls?: boolean; // show native video controls (disables autoplay loop)
 };
 
 export type Project = {
@@ -222,6 +223,7 @@ export const projects: Project[] = [
         type: "video",
         caption: "Game startup — the console interface and live state panel",
         cols: 12,
+        controls: true,
       },
       {
         src: "/assets/wizards-codex/sc_repscript.png",

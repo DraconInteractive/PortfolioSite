@@ -20,10 +20,11 @@ function MediaItem({ item }: { item: ProjectMedia }) {
       <figure className="w-full">
         <video
           src={item.src}
-          autoPlay
+          autoPlay={!item.controls}
           muted
-          loop
+          loop={!item.controls}
           playsInline
+          controls={item.controls}
           className="w-full rounded-sm bg-[#111110]"
         />
         {item.caption && (
