@@ -69,7 +69,7 @@ export default function Hero() {
             Get In Touch
           </a>
           <a
-            href="/assets/PeterCarey_Resume_250526_lf3.pdf"
+            href="/assets/PeterCarey_Resume_030626_lf1.pdf"
             download
             className="px-6 py-3 border border-[#e0dcd4] text-[#111110] text-sm rounded hover:border-[#ff5c00] hover:text-[#ff5c00] transition-all"
           >
