@@ -245,7 +245,6 @@ export const projects: Project[] = [
       },
     ],
     tags: ["Electron", "TypeScript", "React", "Node.js", "xterm.js", "Monaco Editor", "Vite"],
-    repo: "https://github.com/DraconInteractive/WizardsCodex",
   },
   {
     id: "bertie",
